@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Returning to ClipDaddy</title>
+<meta name="robots" content="noindex">
+<style>body{margin:0;background:#171222;color:#f4efff;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;display:grid;place-items:center;height:100vh}a{color:#ffd84d}</style>
+</head><body>
+<p>Returning to ClipDaddy… <a id="go" href="#">Continue</a></p>
+<script>
+// TikTok sends the login result here (a public page on ClipDaddy's website); it is handed
+// straight to the ClipDaddy instance, which is only reachable on its owner's private network.
+var target = "https://homelab-pi.tail4fa5d4.ts.net:8445/tiktok/callback/" + location.search;
+document.getElementById("go").href = target;
+location.replace(target);
+</script>
+<noscript><p>Enable JavaScript, or tap Continue.</p></noscript>
+</body></html>
